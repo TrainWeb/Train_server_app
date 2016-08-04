@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_current_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="10dp"
+        android:padding="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+                <!-- 用定制的CubeImageView -->
+                <in.srain.cube.image.CubeImageView
+                    android:id="@+id/thumb_food"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="0dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/loading" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@drawable/linear_divider"
+                    android:orientation="vertical"
+                    android:showDividers="middle">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_food_list_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:text="宫保鸡丁"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/colorPrimary" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/order_confirm_bt"
+                            style="@style/wrapping_button"
+                            android:layout_alignBaseline="@+id/detail_commodity_price"
+                            android:layout_alignBottom="@+id/detail_commodity_price"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical|right"
+                            android:text="确认受单"
+                            app:bootstrapBrand="danger"
+                            app:roundedCorners="true" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="3"
+                            android:orientation="horizontal">
+
+                            <com.beardedhen.androidbootstrap.BootstrapLabel
+                                android:id="@+id/tv_food_price"
+                                style="@style/wrapping_button"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="right"
+                                android:text="￥0.0"
+                                android:textSize="6dp"
+                                app:bootstrapBrand="warning" />
+
+                            <TextView
+                                android:id="@+id/tv_food_counts"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="15dp"
+                                android:text="0 份"
+
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/oeder_submit_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom">
+
+                        <TextView
+                            android:id="@+id/oeder_submit_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxEms="18"
+                            android:text="" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
